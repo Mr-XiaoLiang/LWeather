@@ -6,6 +6,7 @@ import android.view.View;
 
 /**
  * Created by LiuJ on 2016/3/8.
+ * 天气走势的折线图
  */
 public class LLineChartView extends View {
     public LLineChartView(Context context) {

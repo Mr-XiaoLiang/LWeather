@@ -1,6 +1,8 @@
 package mr_xiaoliang.com.github.lweather;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -16,14 +18,17 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private CollapsingToolbarLayout toolbarLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        toolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        setSupportActionBar(toolbar);
+        toolbarLayout.setExpandedTitleColor(Color.parseColor("#FFFFFF"));
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
