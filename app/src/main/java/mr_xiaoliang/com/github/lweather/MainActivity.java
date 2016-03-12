@@ -15,15 +15,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import mr_xiaoliang.com.github.lweather.util.LbsUtils;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private CollapsingToolbarLayout toolbarLayout;
-
+    LbsUtils lbsUtils;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+          lbsUtils = new LbsUtils(getApplication());
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -34,6 +38,12 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
+                //定位测试
+                lbsUtils.StartLBS();
+
+
+
             }
         });
 
