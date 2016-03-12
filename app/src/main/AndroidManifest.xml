@@ -4,9 +4,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <meta-data
-        android:name="com.baidu.lbsapi.API_KEY"
-        android:value="90z7BPRzzsH1PTgssLtnDbkB" />
 
     <!-- 这个权限用于进行网络定位-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
@@ -33,6 +30,13 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="90z7BPRzzsH1PTgssLtnDbkB" />
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
